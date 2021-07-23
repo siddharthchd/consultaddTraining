@@ -1,0 +1,33 @@
+{% extends 'firstapplication/base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'firstapplication/home.css' %}" />
+
+{% endblock %} {% block content %}
+<div class="container">
+  <h5>This is a list of dummy data I created in the shell</h5>
+</div>
+<div class="container">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Address</th>
+    </tr>
+    {% for person in people %}
+    <tr>
+      <td>{{ person }}</td>
+      <td>{{ person.contact_set.first }}</td>
+      <td>{{ person.address_set.first }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+<div class='container bird'>
+  <img src="{% static 'firstapplication/bird.jpeg' %}" ></img>
+</div>
+
+{% endblock %}
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>

@@ -1,0 +1,25 @@
+td,
+table,
+th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  text-indent: 7px;
+  float: left;
+}
+
+tr {
+  background-color: #eee;
+}
+
+body {
+  background-color: #b5eafb;
+  margin: 40px 20px 10px;
+}
+
+.bird {
+  float: right;
+}

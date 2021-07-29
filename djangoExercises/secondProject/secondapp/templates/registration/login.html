@@ -1,0 +1,12 @@
+{% extends 'secondapp/base.html' %} {% block content %}
+<div class="login-form">
+  <h2>Please login</h2>
+  <form class="login" method="POST">
+    <div>
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" value="Login" />
+      <a href="{% url 'signup' %}">Sign Up</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
